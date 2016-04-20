@@ -15,7 +15,7 @@ Xuint32 cursor_position;
 void set_cursor(Xuint32 new_value){
 	cursor_position = new_value;
 }
-
+//
 void clear_text_screen(Xuint32 BaseAddress){
 	int i;
 	for (i = 0; i < 4800; i++){
