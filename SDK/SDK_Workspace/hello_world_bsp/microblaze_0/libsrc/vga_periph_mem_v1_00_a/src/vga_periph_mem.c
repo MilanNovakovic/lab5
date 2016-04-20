@@ -51,3 +51,21 @@ void draw_square(Xuint32 BaseAddress){
 			}
 		}
 }
+
+void print_char(Xuint32 BaseAddress, unsigned char character) {
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + cursor_position, (character - 0x40));
+	
+}
+
+void set_background_color(Xuint32 BaseAddress, Xuint32 Color) {
+
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + 0x14, Color);
+	
+}
+
+void set_foreground_color(Xuint32 BaseAddress, Xuint32 Color) {
+
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + 0x10, Color);
+	
+}
+
